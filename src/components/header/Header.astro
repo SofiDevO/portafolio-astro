@@ -1,20 +1,15 @@
 ---
+import ThemeIcon from "@components/ThemeIcon.astro";
 import NavMenu from "./NavMenu.astro";
 import menuData from "./menuData.json";
 import Button from "@shared/components/Button.astro";
 ---
 
-<header class="header flex items-center justify-between w-full py-4 px-30 shadow">
+<header class="header flex items-center justify-between w-full py-4 px-30 shadow  shadow-secondary/10 neutral-600  bg-primary">
   <p class="header-logo font-bold text-xl">Logo</p>
   <div class="header-container flex gap-5 items-center">
     <NavMenu {menuData}/>
-    <button id="theme-button" class="cursor-pointer group w-6 h-6 ">
-      <iconify-icon class="group-hover:scale-[.90] " icon="line-md:sunny-outline-loop" width="24" height="24"
-      ></iconify-icon>
-    </button>
-    <!--
-        line-md:moon-filled-loop
-    -->
+      <ThemeIcon/>
     <Button label="Descargar CV" href="/docs/mi_cv.pdf"/>
   </div>
 </header>
