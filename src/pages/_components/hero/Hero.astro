@@ -1,0 +1,35 @@
+---
+import SocialLinks from "@shared/components/SocialLinks.astro";
+import HeroContent from "./HeroContent.astro";
+import userData from "@shared/data/userData.json";
+
+interface userDataType {
+  name: string;
+  shortDesc: string;
+  location: string;
+  availability: boolean;
+  profileImg: string;
+}
+const { name, shortDesc, location, availability } = userData as userDataType;
+---
+
+<section class="hero flex items-center justify-center gap-10 w-full h-screen">
+  <HeroContent {...userData}>
+    <SocialLinks />
+  </HeroContent>
+  <div class="profile-pic w-[280px] h-80">
+    <img
+      class="w-full h-full object-cover object-center"
+      src={userData.profileImg}
+      alt={userData.name}
+      width="280"
+      height="320"
+    />
+  </div>
+</section>
+
+<style>
+  .profile-pic {
+    box-shadow: 26px 22px 1px 8px var(--color-tertiary);
+  }
+</style>

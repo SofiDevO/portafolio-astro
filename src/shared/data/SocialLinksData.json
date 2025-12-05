@@ -1,0 +1,5 @@
+[
+  { "label": "github", "icon": "fa6-brands:github-alt", "link": "#" },
+  {"label": "twitter", "icon": "streamline-logos:x-twitter-logo-block","link": "#"},
+  { "label": "figma", "icon": "solar:figma-bold-duotone", "link": "#" }
+]
